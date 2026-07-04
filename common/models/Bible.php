@@ -35,6 +35,17 @@ class Bible extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+    public function init()
+    {
+        parent::init();
+        if ($this->isNewRecord && $this->translation_id === null) {
+            $this->translation_id = self::ACTIVE_TRANSLATION_ID;
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function rules()
     {
         return [

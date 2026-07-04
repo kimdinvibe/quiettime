@@ -1,0 +1,31 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/local-apache/Dockerfile
+    ports:
+      - "127.0.0.1:8000:80"
+    volumes:
+      - ./:/var/www/html
+    depends_on:
+      - db
+    environment:
+      APACHE_DOCUMENT_ROOT: /var/www/html
+
+  db:
+    image: mysql:5.6
+    platform: linux/amd64
+    ports:
+      - "127.0.0.1:33061:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: quiettime_local
+      MYSQL_USER: quiettime
+      MYSQL_PASSWORD: quiettime
+    volumes:
+      - quiettime_db_data:/var/lib/mysql
+
+volumes:
+  quiettime_db_data:

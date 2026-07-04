@@ -22,7 +22,7 @@ class Bible extends \yii\db\ActiveRecord
      * Old entries keep pointing at whatever bible_id they already reference
      * (e.g. RST), so this only affects newly created/edited readings.
      */
-    const ACTIVE_TRANSLATION_ID = 'JBL';
+    const ACTIVE_TRANSLATION_ID = 'RSTP';
 
     /**
      * {@inheritdoc}

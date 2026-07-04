@@ -1,0 +1,49 @@
+# Env
+/.env
+/vhost.conf
+
+# composer
+/vendor
+composer.phar
+## remove in production!
+composer.lock
+
+# IDE
+.idea
+nbproject
+.buildpath
+.project
+.settings
+
+# windows thumbnail cache
+Thumbs.db
+
+# Mac DS_Store Files
+.DS_Store
+
+# phpunit
+phpunit.phar
+/phpunit.xml
+
+# Vagrant
+/.vagrant
+/vagrant.yaml
+
+# Apns pems
+common/config/apnssert
+
+# Runtime / cache / uploads (per-environment, not source)
+/*/runtime
+/storage/web
+/storage/cache
+
+# macOS zip artifacts leftover from manual transfers
+__MACOSX
+
+# DB dumps / backups - never commit real data
+*.sql
+*.sql.gz
+*.dump
+
+# Node
+node_modules

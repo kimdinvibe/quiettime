@@ -1,0 +1,51 @@
+.navbar-nav>.user-menu>.dropdown-menu {
+    width: 300px;
+}
+
+.ui-autocomplete {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.grid-view .filters input.ui-autocomplete-input {
+    line-height: 18px;
+    padding: 6px 12px;
+}
+
+#main-form #save-list {
+    height: 685px;
+    overflow-y: scroll;
+    background: #3c8dbc14;
+    padding: 10px;
+}
+
+#main-form .items {
+    height: 500px;
+    overflow-y: scroll;
+}
+
+#main-form .item {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #3c8dbc47;
+    /* font-size: 12px; */
+    cursor: pointer;
+}
+
+#main-form .item:hover,
+#main-form .selected {
+    background: #3c8dbc47;
+    color: #ffffff;
+}
+
+#main-form .items .item:hover,
+#main-form .items .selected {
+    color: #000000;
+}
+
+#main-form #save-list .item:hover,
+#main-form #save-list .selected {
+    background: #e98c8c;
+    color: #ffffff;
+}

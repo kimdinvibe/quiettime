@@ -1,0 +1,11 @@
+{
+  "name": "ミックスワールド",
+  "version": "0.1.0",
+  "description": "A basic api",
+  "title": "Custom api for animal",
+  "url": "http://13.115.19.92/api/v1",
+  "sampleUrl": "http://13.115.19.92/api/v1",
+  "template": {
+    "forceLanguage": "en"
+  }
+}

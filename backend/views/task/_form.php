@@ -64,7 +64,9 @@ use yii\bootstrap\ActiveForm;
         <div class="col-sm-6">
             <div class="form-group">
                 <label class="control-label">Book</label>
-                <?php echo Html::dropDownList('book', $selection = null, \yii\helpers\ArrayHelper::map(\common\models\Bible::find()->groupBy('book_name')->orderBy([
+                <?php echo Html::dropDownList('book', $selection = null, \yii\helpers\ArrayHelper::map(\common\models\Bible::find()->where([
+                    'translation_id' => \common\models\Bible::ACTIVE_TRANSLATION_ID,
+                ])->groupBy('book_name')->orderBy([
                     'book_name' => SORT_ASC
                 ])->asArray()->all(), 'book_name', 'book_name'), $options = [
                     'class' => 'form-control',

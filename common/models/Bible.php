@@ -18,6 +18,13 @@ use Yii;
 class Bible extends \yii\db\ActiveRecord
 {
     /**
+     * Translation used when picking verses for new Task entries.
+     * Old entries keep pointing at whatever bible_id they already reference
+     * (e.g. RST), so this only affects newly created/edited readings.
+     */
+    const ACTIVE_TRANSLATION_ID = 'JBL';
+
+    /**
      * {@inheritdoc}
      */
     public static function tableName()

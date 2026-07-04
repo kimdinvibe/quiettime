@@ -128,6 +128,7 @@ class TaskController extends Controller
 
         return \yii\helpers\ArrayHelper::map(\common\models\Bible::find()->where([
             'book_name' => $book_name,
+            'translation_id' => \common\models\Bible::ACTIVE_TRANSLATION_ID,
         ])->groupBy('chapter')->orderBy([
             'chapter' => SORT_ASC
         ])->asArray()->all(), 'chapter', 'chapter');
@@ -142,6 +143,7 @@ class TaskController extends Controller
             ->where([
                 'book_name' => $book_name,
                 'chapter' => $chapter,
+                'translation_id' => \common\models\Bible::ACTIVE_TRANSLATION_ID,
             ])->orderBy([
                 'verse' => SORT_ASC
             ])->asArray()->all();
